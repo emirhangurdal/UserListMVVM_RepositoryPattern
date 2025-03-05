@@ -28,6 +28,8 @@
 		5808D6042D78690A006CAE0F /* UserViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5808D6032D786901006CAE0F /* UserViewModelTests.swift */; };
 		5808D6052D78690C006CAE0F /* MockUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5808D6022D786901006CAE0F /* MockUserRepository.swift */; };
 		5808D6082D786D01006CAE0F /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5808D6072D786D01006CAE0F /* AppCoordinator.swift */; };
+		5808D60A2D78EB10006CAE0F /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5808D6092D78EB10006CAE0F /* APIClientTests.swift */; };
+		5808D60C2D78EDA5006CAE0F /* URLProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5808D60B2D78EDA5006CAE0F /* URLProtocolMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		5808D6022D786901006CAE0F /* MockUserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserRepository.swift; sourceTree = "<group>"; };
 		5808D6032D786901006CAE0F /* UserViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModelTests.swift; sourceTree = "<group>"; };
 		5808D6072D786D01006CAE0F /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		5808D6092D78EB10006CAE0F /* APIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
+		5808D60B2D78EDA5006CAE0F /* URLProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +219,8 @@
 			children = (
 				5808D6022D786901006CAE0F /* MockUserRepository.swift */,
 				5808D6032D786901006CAE0F /* UserViewModelTests.swift */,
+				5808D6092D78EB10006CAE0F /* APIClientTests.swift */,
+				5808D60B2D78EDA5006CAE0F /* URLProtocolMock.swift */,
 			);
 			path = UserListMVVMTests;
 			sourceTree = "<group>";
@@ -351,8 +357,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5808D60A2D78EB10006CAE0F /* APIClientTests.swift in Sources */,
 				5808D6052D78690C006CAE0F /* MockUserRepository.swift in Sources */,
 				5808D6042D78690A006CAE0F /* UserViewModelTests.swift in Sources */,
+				5808D60C2D78EDA5006CAE0F /* URLProtocolMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

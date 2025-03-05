@@ -11,9 +11,9 @@ final class APIUserRepository: UserRepository {
     
     
        
-    private let apiClient: APIClient
+    private let apiClient: APIClientProtocol
 
-    init(apiClient: APIClient) {
+    init(apiClient: APIClientProtocol) {
         self.apiClient = apiClient
     }
 

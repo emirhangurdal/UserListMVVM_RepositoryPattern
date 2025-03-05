@@ -10,7 +10,8 @@ import UIKit
 
 final class UserListVC: UIViewController {
     
-    let viewModel: UserViewModel
+    var viewModel: UserViewModelProtocol
+    
     private let tableView: UITableView = {
         let tv = UITableView()
         tv.translatesAutoresizingMaskIntoConstraints = false
@@ -18,7 +19,7 @@ final class UserListVC: UIViewController {
         return tv
     }()
     
-    init(viewModel: UserViewModel) {
+    init(viewModel: UserViewModelProtocol) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -57,9 +58,11 @@ final class UserListVC: UIViewController {
             }
         }
         
-        viewModel.onError = { [weak self] in
+        viewModel.onError = { errorMessage in
             DispatchQueue.main.async {
-                print("Error: \(self?.viewModel.errorMessage ?? "Unknown error")")
+                if let errorMessage = errorMessage {
+                    print("errorMessage: \(errorMessage)")
+                }
             }
         }
     }

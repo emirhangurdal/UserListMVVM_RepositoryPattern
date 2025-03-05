@@ -6,10 +6,18 @@
 //
 
 import Foundation
-// ViewModel can be used for business logic in the view controller. Displaying data on a Table View, updating the UI when necessary using simple completion blocks. 
-final class UserViewModel {
-    
-    private let userService: UserService
+
+protocol UserViewModelProtocol {
+    var users: [User] { get }
+    var onUsersUpdated: (() -> Void)? { get set }
+    var onError: ((String?) -> Void)? { get set }
+    func fetchUsers()
+}
+
+// ViewModel Protocol makes the code testable with mock data. 
+final class UserViewModel: UserViewModelProtocol {
+ 
+    private let userService: UserServiceProtocol
     
     var users: [User] = [] {
         didSet {
@@ -19,12 +27,12 @@ final class UserViewModel {
     
     var errorMessage: String? {
         didSet {
-            onError?()
+            onError?(errorMessage)
         }
     }
     
     var onUsersUpdated: (() -> Void)?
-    var onError: (() -> Void)?
+    var onError: ((String?) -> Void)?
     
     init(userService: UserService) {
         self.userService = userService

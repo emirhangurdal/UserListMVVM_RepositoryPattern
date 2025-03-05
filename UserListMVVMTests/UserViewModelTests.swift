@@ -34,7 +34,7 @@ class UserViewModelTests: XCTestCase {
 
         let expectation = XCTestExpectation(description: "Error callback should be triggered")
         
-        viewModel.onError = {
+        viewModel.onError = { errorMessage in
             XCTAssertNotNil(viewModel.errorMessage, "Error message should be set")
             expectation.fulfill()
         }

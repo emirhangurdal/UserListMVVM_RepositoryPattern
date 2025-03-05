@@ -7,9 +7,18 @@
 
 import Foundation
 
-final class APIClient {
+protocol APIClientProtocol {
+     func fetch<T: Decodable>(endpoint: String, completion: @escaping (Result<T, Error>) -> Void)
+ }
+
+final class APIClient: APIClientProtocol {
     //: Network Layer uses a function that takes generic type modern Result type for completion making it reusable for other endpoints if available. Using Network Errors enum, we can catch the errors and implement UI logic for example; error alerts. 
     private let baseURL = "https://jsonplaceholder.typicode.com"
+    private let session: URLSession
+    
+    init(session: URLSession = .shared) {
+            self.session = session
+        }
     
     func fetch<T: Decodable>(endpoint: String, completion: @escaping (Result<T, Error>) -> Void) {
         guard let url = URL(string: "\(baseURL)/\(endpoint)") else {
@@ -17,7 +26,7 @@ final class APIClient {
             return
         }
         
-        URLSession.shared.dataTask(with: url) { data, response, error in
+        session.dataTask(with: url) { data, response, error in
             if let error = error {
                 completion(.failure(error))
                 return
