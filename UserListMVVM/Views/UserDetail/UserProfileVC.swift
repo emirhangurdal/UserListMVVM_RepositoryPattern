@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class UserProfileVC: UIViewController {
+final class UserProfileVC: UIViewController {
     
     private let user: User
     

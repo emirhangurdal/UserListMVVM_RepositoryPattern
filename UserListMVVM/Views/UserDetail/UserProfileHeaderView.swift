@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class UserProfileHeaderView: UIView {
+final class UserProfileHeaderView: UIView {
     
     private let user: User
     

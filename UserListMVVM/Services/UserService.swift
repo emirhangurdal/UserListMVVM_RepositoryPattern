@@ -7,7 +7,7 @@
 
 import Foundation
 
-class UserService {
+final class UserService {
     
     private let repository: UserRepository
     

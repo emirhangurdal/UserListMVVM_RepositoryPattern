@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class UserListVC: UIViewController {
+final class UserListVC: UIViewController {
     
     let viewModel: UserViewModel
     private let tableView: UITableView = {

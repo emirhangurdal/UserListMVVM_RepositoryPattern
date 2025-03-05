@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class CompanyView: UIView {
+final class CompanyView: UIView {
     
     private let company: Company
     private let companyNameLabel = UILabel()

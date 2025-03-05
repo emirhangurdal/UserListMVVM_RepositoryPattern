@@ -7,7 +7,7 @@
 
 import Foundation
 // API User Repository makes a simple call for our controller to display data through User Service whose instance we use in the viewModel for UsersListVC. 
-class APIUserRepository: UserRepository {
+final class APIUserRepository: UserRepository {
     
     
        

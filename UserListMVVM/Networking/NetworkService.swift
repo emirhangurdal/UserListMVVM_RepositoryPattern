@@ -7,7 +7,7 @@
 
 import Foundation
 
-class APIClient {
+final class APIClient {
     //: Network Layer uses a function that takes generic type modern Result type for completion making it reusable for other endpoints if available. Using Network Errors enum, we can catch the errors and implement UI logic for example; error alerts. 
     private let baseURL = "https://jsonplaceholder.typicode.com"
     

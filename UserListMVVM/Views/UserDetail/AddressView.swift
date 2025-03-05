@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class AddressView: UIView {
+final class AddressView: UIView {
     
     private let address: Address
     

@@ -7,7 +7,7 @@
 
 import Foundation
 // ViewModel can be used for business logic in the view controller. Displaying data on a Table View, updating the UI when necessary using simple completion blocks. 
-class UserViewModel {
+final class UserViewModel {
     
     private let userService: UserService
     
