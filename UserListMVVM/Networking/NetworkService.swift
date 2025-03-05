@@ -27,7 +27,7 @@ class APIClient {
                 completion(.failure(NetworkError.noData))
                 return
             }
-            //: Data Parsed with generic type making this function reusable for different types. 
+            //: Data Parsed with generic type making this function reusable for different types.
             do {
                 let decodedData = try JSONDecoder().decode(T.self, from: data)
                 DispatchQueue.main.async {

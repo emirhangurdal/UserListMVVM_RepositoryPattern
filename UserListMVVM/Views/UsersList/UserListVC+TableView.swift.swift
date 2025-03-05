@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-
+// Extension of UserListVC for cleaner structure of code. This here implements delegate methods 
 extension UserListVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
