@@ -2,7 +2,7 @@
 
 import XCTest
 @testable import UserListMVVM
-//Unit Tests with Mock data to test the logic of fetching the users from the endpoint as well as error block. 
+//Unit Tests with Mock data to test the logic of fetching the users from the endpoint as well as error block. We are using user service here, but if we want we can use protocol without the service to test the viewmodel. 
 class UserViewModelTests: XCTestCase {
 
     func testFetchUsers_Success() {
