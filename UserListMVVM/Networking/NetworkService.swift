@@ -6,13 +6,13 @@
 //
 
 import Foundation
-//: APIClient Protocol enable us to create tests without URLSession or mock data. It gives the code flexibility for testing but since case wants us to test the APIClient itself I created an instance to the class itself in test case. 
+//: APIClient Protocol enable us to create tests without URLSession or mock data. It gives the code flexibility for testing. But since case wants us to test the APIClient itself I created an instance to the class itself in test case.
 protocol APIClientProtocol {
      func fetch<T: Decodable>(endpoint: String, completion: @escaping (Result<T, Error>) -> Void)
  }
 
 final class APIClient: APIClientProtocol {
-    //: Network Layer uses a function that takes generic type modern Result type for completion making it reusable for other endpoints if available. Using Network Errors enum, we can catch the errors and implement UI logic for example; error alerts. 
+    //: Network Layer uses a function that takes generic type, Result type for completion making it reusable for other endpoints if available. Using Network Errors enum, we can catch the errors and implement UI logic for example; error alerts.
     private let baseURL = "https://jsonplaceholder.typicode.com"
     private let session: URLSession
     

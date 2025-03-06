@@ -7,6 +7,7 @@
 
 import Foundation
 
+// ViewModel Protocol makes the code flexible for testing with mock data.
 protocol UserViewModelProtocol {
     var users: [User] { get }
     var onUsersUpdated: (() -> Void)? { get set }
@@ -14,7 +15,7 @@ protocol UserViewModelProtocol {
     func fetchUsers()
 }
 
-// ViewModel Protocol makes the code testable with mock data. 
+
 final class UserViewModel: UserViewModelProtocol {
  
     private let userService: UserServiceProtocol
