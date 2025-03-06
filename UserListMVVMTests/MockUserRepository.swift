@@ -4,18 +4,23 @@ import Foundation
 
 class MockUserRepository: UserRepository {
     var shouldReturnError = false
+    var numberOfUsers = 1 // Default to 1, can be changed for tests
 
     func fetchUsers(completion: @escaping (Result<[User], Error>) -> Void) {
         if shouldReturnError {
             completion(.failure(NetworkError.noData))
         } else {
-            completion(.success([User(id: 1, name: "John Doe", username: "johndoe", email: "john@example.com",
-                                      address: Address(street: "123 St", suite: "Apt 1", city: "New York", zipcode: "10001",
-                                                       geo: Geo(lat: "0.0", lng: "0.0")),
-                                      phone: "123-456-7890", website: "example.com",
-                                      company: Company(name: "Example Inc", catchPhrase: "Test", bs: "Tech"))]))
+            let users = (1...numberOfUsers).map { index in
+                User(id: index, name: "User \(index)", username: "user\(index)", email: "user\(index)@example.com",
+                     address: Address(street: "Street \(index)", suite: "Apt \(index)", city: "City \(index)", zipcode: "Zip\(index)",
+                                      geo: Geo(lat: "0.0", lng: "0.0")),
+                     phone: "123-456-789\(index)", website: "user\(index).com",
+                     company: Company(name: "Company \(index)", catchPhrase: "Test", bs: "Tech"))
+            }
+            completion(.success(users))
         }
     }
 }
+
 
 

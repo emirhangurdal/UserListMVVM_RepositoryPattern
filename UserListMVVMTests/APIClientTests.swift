@@ -15,9 +15,9 @@ class APIClientTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        
+        //: Testing with session and instance of APIClient to check error and data completions. 
         let configuration = URLSessionConfiguration.ephemeral
-        configuration.protocolClasses = [URLProtocolMock.self] // Ensure mock is used
+        configuration.protocolClasses = [URLProtocolMock.self]
         let session = URLSession(configuration: configuration)
 
         apiClient = APIClient(session: session)

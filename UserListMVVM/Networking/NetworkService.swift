@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+//: APIClient Protocol enable us to create tests without URLSession or mock data. It gives the code flexibility for testing but since case wants us to test the APIClient itself I created an instance to the class itself in test case. 
 protocol APIClientProtocol {
      func fetch<T: Decodable>(endpoint: String, completion: @escaping (Result<T, Error>) -> Void)
  }
