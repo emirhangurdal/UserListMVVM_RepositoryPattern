@@ -28,4 +28,33 @@ extension UserListVC: UITableViewDelegate, UITableViewDataSource {
         let userDetailVC = UserProfileVC(user: viewModel.users[indexPath.row])
         self.navigationController?.pushViewController(userDetailVC, animated: true)
     }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let editAction = UIContextualAction(style: .normal, title: "Edit") { [weak self] (action, view, completionHandler) in
+            guard let self = self else { return }
+            let user = self.viewModel.users[indexPath.row]
+            let updatedUser = User(id: 1999, name: "Sarah", username: "Sarah", email: "sara@sarah", address: Address(street: "Street", suite: "Suite", city: "City", zipcode: "ZipCode", geo: Geo(lat: "0.0", lng: "0.0")), phone: "Phone", website: "website", company: Company(name: "Comp.", catchPhrase: "cp", bs: "bs"))
+            self.viewModel.updateUser(user, updatedUser: updatedUser)
+            completionHandler(true)
+        }
+        editAction.backgroundColor = .blue
+        
+        let configuration = UISwipeActionsConfiguration(actions: [editAction])
+        configuration.performsFirstActionWithFullSwipe = false
+        return configuration
+    }
+    
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { [weak self] (action, view, completionHandler) in
+            guard let self = self else { return }
+            let userId = self.viewModel.users[indexPath.row].id
+            self.viewModel.deleteUser(withId: userId)
+            completionHandler(true)
+        }
+        deleteAction.backgroundColor = .red
+        
+        let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
+        configuration.performsFirstActionWithFullSwipe = false
+        return configuration
+    }
 }

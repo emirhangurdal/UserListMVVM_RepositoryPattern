@@ -14,8 +14,7 @@
 		5808D5AF2D76D93A006CAE0F /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5808D5AE2D76D93A006CAE0F /* UserService.swift */; };
 		5808D5B22D76D9AC006CAE0F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5808D5B12D76D9AC006CAE0F /* User.swift */; };
 		5808D5C02D778D86006CAE0F /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5808D5BF2D778D86006CAE0F /* NetworkError.swift */; };
-		5808D5C62D778E12006CAE0F /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5808D5C52D778E12006CAE0F /* UserRepository.swift */; };
-		5808D5C82D779027006CAE0F /* APIUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5808D5C72D779026006CAE0F /* APIUserRepository.swift */; };
+		5808D5C82D779027006CAE0F /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5808D5C72D779026006CAE0F /* UserRepository.swift */; };
 		5808D5CA2D779206006CAE0F /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5808D5C92D779206006CAE0F /* UserViewModel.swift */; };
 		5808D5CC2D7792D2006CAE0F /* UserListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5808D5CB2D7792D2006CAE0F /* UserListVC.swift */; };
 		5808D5CE2D779478006CAE0F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5808D5CD2D779478006CAE0F /* SceneDelegate.swift */; };
@@ -30,6 +29,20 @@
 		5808D6082D786D01006CAE0F /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5808D6072D786D01006CAE0F /* AppCoordinator.swift */; };
 		5808D60A2D78EB10006CAE0F /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5808D6092D78EB10006CAE0F /* APIClientTests.swift */; };
 		5808D60C2D78EDA5006CAE0F /* URLProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5808D60B2D78EDA5006CAE0F /* URLProtocolMock.swift */; };
+		58234DFD2D79D8520056FCA5 /* UserRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58234DFC2D79D8520056FCA5 /* UserRepositoryProtocol.swift */; };
+		58234DFF2D7A27850056FCA5 /* UserServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58234DFE2D7A27850056FCA5 /* UserServiceProtocol.swift */; };
+		58234E022D7A2EFA0056FCA5 /* UserListDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 58234E002D7A2EFA0056FCA5 /* UserListDB.xcdatamodeld */; };
+		58234E1B2D7ABB010056FCA5 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58234E1A2D7ABB010056FCA5 /* CoreDataManager.swift */; };
+		58234E1D2D7AD00A0056FCA5 /* User+SaveToCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58234E1C2D7AD00A0056FCA5 /* User+SaveToCoreData.swift */; };
+		58234E2F2D7AEBDC0056FCA5 /* UserEntity+ToModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58234E2E2D7AEBDC0056FCA5 /* UserEntity+ToModel.swift */; };
+		58234E482D7B1A940056FCA5 /* AddressEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58234E402D7B1A940056FCA5 /* AddressEntity+CoreDataClass.swift */; };
+		58234E492D7B1A940056FCA5 /* AddressEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58234E412D7B1A940056FCA5 /* AddressEntity+CoreDataProperties.swift */; };
+		58234E4A2D7B1A940056FCA5 /* GeoEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58234E422D7B1A940056FCA5 /* GeoEntity+CoreDataClass.swift */; };
+		58234E4B2D7B1A940056FCA5 /* GeoEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58234E432D7B1A940056FCA5 /* GeoEntity+CoreDataProperties.swift */; };
+		58234E4C2D7B1A940056FCA5 /* CompanyEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58234E442D7B1A940056FCA5 /* CompanyEntity+CoreDataClass.swift */; };
+		58234E4D2D7B1A940056FCA5 /* CompanyEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58234E452D7B1A940056FCA5 /* CompanyEntity+CoreDataProperties.swift */; };
+		58234E4E2D7B1A940056FCA5 /* UserEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58234E462D7B1A940056FCA5 /* UserEntity+CoreDataClass.swift */; };
+		58234E4F2D7B1A940056FCA5 /* UserEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58234E472D7B1A940056FCA5 /* UserEntity+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +65,7 @@
 		5808D5AE2D76D93A006CAE0F /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		5808D5B12D76D9AC006CAE0F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5808D5BF2D778D86006CAE0F /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
-		5808D5C52D778E12006CAE0F /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
-		5808D5C72D779026006CAE0F /* APIUserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIUserRepository.swift; sourceTree = "<group>"; };
+		5808D5C72D779026006CAE0F /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		5808D5C92D779206006CAE0F /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		5808D5CB2D7792D2006CAE0F /* UserListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListVC.swift; sourceTree = "<group>"; };
 		5808D5CD2D779478006CAE0F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +81,20 @@
 		5808D6072D786D01006CAE0F /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		5808D6092D78EB10006CAE0F /* APIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
 		5808D60B2D78EDA5006CAE0F /* URLProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolMock.swift; sourceTree = "<group>"; };
+		58234DFC2D79D8520056FCA5 /* UserRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryProtocol.swift; sourceTree = "<group>"; };
+		58234DFE2D7A27850056FCA5 /* UserServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceProtocol.swift; sourceTree = "<group>"; };
+		58234E012D7A2EFA0056FCA5 /* UserList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserList.xcdatamodel; sourceTree = "<group>"; };
+		58234E1A2D7ABB010056FCA5 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		58234E1C2D7AD00A0056FCA5 /* User+SaveToCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+SaveToCoreData.swift"; sourceTree = "<group>"; };
+		58234E2E2D7AEBDC0056FCA5 /* UserEntity+ToModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserEntity+ToModel.swift"; sourceTree = "<group>"; };
+		58234E402D7B1A940056FCA5 /* AddressEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddressEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		58234E412D7B1A940056FCA5 /* AddressEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddressEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		58234E422D7B1A940056FCA5 /* GeoEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GeoEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		58234E432D7B1A940056FCA5 /* GeoEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GeoEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		58234E442D7B1A940056FCA5 /* CompanyEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CompanyEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		58234E452D7B1A940056FCA5 /* CompanyEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CompanyEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		58234E462D7B1A940056FCA5 /* UserEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		58234E472D7B1A940056FCA5 /* UserEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +118,14 @@
 		5808D5862D762D52006CAE0F = {
 			isa = PBXGroup;
 			children = (
+				58234E402D7B1A940056FCA5 /* AddressEntity+CoreDataClass.swift */,
+				58234E412D7B1A940056FCA5 /* AddressEntity+CoreDataProperties.swift */,
+				58234E422D7B1A940056FCA5 /* GeoEntity+CoreDataClass.swift */,
+				58234E432D7B1A940056FCA5 /* GeoEntity+CoreDataProperties.swift */,
+				58234E442D7B1A940056FCA5 /* CompanyEntity+CoreDataClass.swift */,
+				58234E452D7B1A940056FCA5 /* CompanyEntity+CoreDataProperties.swift */,
+				58234E462D7B1A940056FCA5 /* UserEntity+CoreDataClass.swift */,
+				58234E472D7B1A940056FCA5 /* UserEntity+CoreDataProperties.swift */,
 				5808D6012D786901006CAE0F /* UserListMVVMTests */,
 				5808D5912D762D52006CAE0F /* UserListMVVM */,
 				5808D5902D762D52006CAE0F /* Products */,
@@ -110,6 +144,7 @@
 		5808D5912D762D52006CAE0F /* UserListMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				58234E072D7AB8F20056FCA5 /* CoreData */,
 				5808D5C42D778DB8006CAE0F /* Views */,
 				5808D5C32D778DB0006CAE0F /* ViewModels */,
 				5808D5C22D778DA6006CAE0F /* Services */,
@@ -119,6 +154,7 @@
 				5808D5AA2D76CFBE006CAE0F /* App */,
 				5808D5A82D76CFAD006CAE0F /* Networking */,
 				5808D5A02D762D55006CAE0F /* Info.plist */,
+				58234E002D7A2EFA0056FCA5 /* UserListDB.xcdatamodeld */,
 			);
 			path = UserListMVVM;
 			sourceTree = "<group>";
@@ -155,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				5808D5B12D76D9AC006CAE0F /* User.swift */,
+				58234E1C2D7AD00A0056FCA5 /* User+SaveToCoreData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -162,8 +199,8 @@
 		5808D5C12D778D9A006CAE0F /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				5808D5C52D778E12006CAE0F /* UserRepository.swift */,
-				5808D5C72D779026006CAE0F /* APIUserRepository.swift */,
+				5808D5C72D779026006CAE0F /* UserRepository.swift */,
+				58234DFC2D79D8520056FCA5 /* UserRepositoryProtocol.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -172,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				5808D5AE2D76D93A006CAE0F /* UserService.swift */,
+				58234DFE2D7A27850056FCA5 /* UserServiceProtocol.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -231,6 +269,15 @@
 				5808D6072D786D01006CAE0F /* AppCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		58234E072D7AB8F20056FCA5 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				58234E1A2D7ABB010056FCA5 /* CoreDataManager.swift */,
+				58234E2E2D7AEBDC0056FCA5 /* UserEntity+ToModel.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,19 +381,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				5808D5D82D779F1F006CAE0F /* UserProfileHeaderView.swift in Sources */,
+				58234DFD2D79D8520056FCA5 /* UserRepositoryProtocol.swift in Sources */,
 				5808D5D22D7798F7006CAE0F /* UserListVC+TableView.swift.swift in Sources */,
 				5808D6082D786D01006CAE0F /* AppCoordinator.swift in Sources */,
 				5808D5CC2D7792D2006CAE0F /* UserListVC.swift in Sources */,
+				58234E022D7A2EFA0056FCA5 /* UserListDB.xcdatamodeld in Sources */,
 				5808D5AF2D76D93A006CAE0F /* UserService.swift in Sources */,
+				58234E482D7B1A940056FCA5 /* AddressEntity+CoreDataClass.swift in Sources */,
+				58234E492D7B1A940056FCA5 /* AddressEntity+CoreDataProperties.swift in Sources */,
+				58234E4A2D7B1A940056FCA5 /* GeoEntity+CoreDataClass.swift in Sources */,
+				58234E4B2D7B1A940056FCA5 /* GeoEntity+CoreDataProperties.swift in Sources */,
+				58234E4C2D7B1A940056FCA5 /* CompanyEntity+CoreDataClass.swift in Sources */,
+				58234E4D2D7B1A940056FCA5 /* CompanyEntity+CoreDataProperties.swift in Sources */,
+				58234E4E2D7B1A940056FCA5 /* UserEntity+CoreDataClass.swift in Sources */,
+				58234E4F2D7B1A940056FCA5 /* UserEntity+CoreDataProperties.swift in Sources */,
 				5808D5D02D779852006CAE0F /* CustomTableViewCell.swift in Sources */,
 				5808D5AD2D76D040006CAE0F /* NetworkService.swift in Sources */,
-				5808D5C82D779027006CAE0F /* APIUserRepository.swift in Sources */,
-				5808D5C62D778E12006CAE0F /* UserRepository.swift in Sources */,
+				5808D5C82D779027006CAE0F /* UserRepository.swift in Sources */,
 				5808D5EF2D785C83006CAE0F /* UserProfileVC.swift in Sources */,
 				5808D5CE2D779478006CAE0F /* SceneDelegate.swift in Sources */,
 				5808D5C02D778D86006CAE0F /* NetworkError.swift in Sources */,
+				58234E1B2D7ABB010056FCA5 /* CoreDataManager.swift in Sources */,
+				58234E1D2D7AD00A0056FCA5 /* User+SaveToCoreData.swift in Sources */,
 				5808D5B22D76D9AC006CAE0F /* User.swift in Sources */,
 				5808D5CA2D779206006CAE0F /* UserViewModel.swift in Sources */,
+				58234DFF2D7A27850056FCA5 /* UserServiceProtocol.swift in Sources */,
+				58234E2F2D7AEBDC0056FCA5 /* UserEntity+ToModel.swift in Sources */,
 				5808D5932D762D52006CAE0F /* AppDelegate.swift in Sources */,
 				5808D5DC2D779F48006CAE0F /* CompanyView.swift in Sources */,
 				5808D5DA2D779F39006CAE0F /* AddressView.swift in Sources */,
@@ -623,6 +683,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		58234E002D7A2EFA0056FCA5 /* UserListDB.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				58234E012D7A2EFA0056FCA5 /* UserList.xcdatamodel */,
+			);
+			currentVersion = 58234E012D7A2EFA0056FCA5 /* UserList.xcdatamodel */;
+			path = UserListDB.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5808D5872D762D52006CAE0F /* Project object */;
 }

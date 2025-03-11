@@ -2,7 +2,15 @@
 import Foundation
 @testable import UserListMVVM
 
-class MockUserRepository: UserRepository {
+class MockUserRepository: UserRepositoryProtocol {
+    func deleteUser(withId id: Int, completion: @escaping (Result<Void, any Error>) -> Void) {
+        
+    }
+    
+    func updateUser(_ user: UserListMVVM.User, completion: @escaping (Result<UserListMVVM.User, any Error>) -> Void) {
+        
+    }
+    
     var shouldReturnError = false
     var numberOfUsers = 1 // Default to 1, can be changed for tests
 

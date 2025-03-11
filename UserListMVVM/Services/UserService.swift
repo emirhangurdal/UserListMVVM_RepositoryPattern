@@ -7,15 +7,11 @@
 
 import Foundation
 
-protocol UserServiceProtocol {
-    func fetchUsers(completion: @escaping (Result<[User], Error>) -> Void)
-}
-
 final class UserService: UserServiceProtocol {
+   
+    private let repository: UserRepositoryProtocol
     
-    private let repository: UserRepository
-    
-    init(repository: UserRepository) {
+    init(repository: UserRepositoryProtocol) {
         self.repository = repository
     }
     
